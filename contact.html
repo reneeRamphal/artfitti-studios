@@ -34,25 +34,44 @@
     </p>
 
     <div class="contact-info">
-        <p><strong>Email:</strong> naytaashasart@gmail.com</p>
-        <p><strong>Instagram:</strong> @artfitti.lounge</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/renee-r-794850382</p>
-    </div>
 
-    <form>
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:naytaashasart@gmail.com">
+            naytaashasart@gmail.com
+        </a>
+    </p>
 
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+    <p>
+        <strong>Instagram:</strong>
+        <a href="https://www.instagram.com/artfitti.lounge/" target="_blank">
+            @artfitti.lounge
+        </a>
+    </p>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+    <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/renee-r-794850382/" target="_blank">
+            Renee Ramphal
+        </a>
+    </p>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+</div>
 
-        <button type="submit">Send Message</button>
+<form name="contact" method="POST" data-netlify="true">
 
-    </form>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+</form>
 
 </section>
 
