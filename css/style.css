@@ -1,965 +1,105 @@
 
-.home-page {
-    background: #a091ca;
-}
-
-/* ========================================
-   RESET
-======================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* ========================================
-   BODY
-======================================== */
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #111111;
-    min-height: 100vh;
-}
-
-
-/* ========================================
-   HEADER
-======================================== */
-
-header {
-    width: 100%;
-    text-align: center;
-    padding: 30px 20px 20px;
-    background: #ffffff;
-    border-bottom: 1px solid #eee;
-}
-
-header h1 {
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-
-/* ========================================
-   NAVIGATION
-======================================== */
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    text-decoration: none;
-    color: #111111;
-    font-size: 14px;
-    font-weight: 400;
-    transition: opacity 0.3s ease;
-}
-
-nav a:hover {
-    opacity: 0.5;
-}
-
-
-/* ========================================
-   HERO
-======================================== */
-
-.hero {
-    max-width: 650px;
-    margin: 80px auto 40px;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 15px;
-    line-height: 1.7;
-    max-width: 550px;
-    margin: 0 auto;
-}
-
-
-/* ========================================
-   HERO IMAGE / HOME PAGE
-======================================== */
-
-.hero-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto 80px;
-    padding: 0 20px;
-}
-
-.hero-image img {
-    display: block;
-    width: 750px;
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* ========================================
-   GALLERY
-======================================== */
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1500px;
-    margin: 80px auto;
-    padding: 0 40px;
-}
-
-.card img {
-    width: 100%;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.card:hover img {
-    transform: scale(1.04);
-}
-
-.gallery img {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.03);
-}
-
-
-/* ========================================
-   ABOUT PAGE
-======================================== */
-
-.about {
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 40px;
-
-    display: grid;
-    grid-template-columns: 700px 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-}
-
-.about-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-
-/* ========================================
-   CONTACT PAGE
-======================================== */
-
-.contact {
-    max-width: 700px;
-    margin: 80px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.contact p {
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.contact-info {
-    margin-bottom: 40px;
-}
-
-
-/* ========================================
-   CONTACT FORM
-======================================== */
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-label {
-    text-align: left;
-    font-weight: bold;
-}
-
-input,
-textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    border-radius: 6px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-button {
-    padding: 15px;
-    border: none;
-    background: #000000;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #555555;
-}
-
-
-/* ========================================
-   GENERATIVE ART
-======================================== */
-
-.generative-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-
-    width: 100%;
-    max-width: 900px;
-
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.generative-container canvas {
-    display: block;
-
-    width: 700px;
-    max-width: 100%;
-    height: auto;
-
-    border: 2px solid #ccc;
-}
-
-
-/* ========================================
-   LIGHTBOX
-======================================== */
-
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.9);
-
-    justify-content: center;
-    align-items: center;
-
-    z-index: 1000;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
-}
-
-.close {
-    position: absolute;
-    top: 25px;
-    right: 40px;
-
-    color: white;
-    font-size: 45px;
-    cursor: pointer;
-
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* ========================================
-   GENERAL TEXT
-======================================== */
-
-h1 {
-    text-align: center;
-}
-
-body > p {
-    text-align: center;
-    max-width: 700px;
-    margin: 20px auto 50px;
-    line-height: 1.7;
-}
-
-.text {
-    max-width: 700px;
-    margin: 40px auto;
-    text-align: center;
-    line-height: 1.6;
-}
-
-
-/* ========================================
-   FOOTER
-======================================== */
-
-footer {
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 50px;
-
-    font-size: 12px;
-    color: #666666;
-
-    background: #f5f5f5;
-    border-top: 1px solid #ddd;
-}
-
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 768px) {
-
-    /* About */
-
-    .about {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 0 20px;
-    }
-
-    .about-image {
-        max-width: 300px;
-        margin: auto;
-    }
-
-    /* Gallery */
-
-    .gallery {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 0 20px;
-    }
-
-    /* Generative Art */
-
-    .generative-container {
-        gap: 25px;
-        padding: 0 15px;
-    }
-
-    .generative-container canvas {
-        width: 100%;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    /* Header */
-
-    header {
-        padding-top: 25px;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    /* Navigation */
-
-    nav {
-        gap: 15px;
-    }
-
-    nav a {
-        font-size: 13px;
-    }
-
-    /* Hero */
-
-    .hero {
-        margin-top: 60px;
-    }
-
-    .hero h2 {
-        font-size: 26px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
-
-    /* Hero Image */
-
-    .hero-image img {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    /* About */
-
-    .about-text h2 {
-        font-size: 2rem;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-    }
-}
-
-
-/* ========================================
-   RESET
-======================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* ========================================
-   BODY
-======================================== */
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #111111;
-    min-height: 100vh;
-}
-
-
-/* ========================================
-   HEADER
-======================================== */
-
-header {
-    width: 100%;
-    text-align: center;
-    padding: 30px 20px 20px;
-    background: #ffffff;
-    border-bottom: 1px solid #eeeeee;
-}
-
-header h1 {
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-
-/* ========================================
-   NAVIGATION
-======================================== */
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: #111111;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 400;
-    transition: opacity 0.3s ease;
-}
-
-nav a:hover {
-    opacity: 0.5;
-}
-
-
-/* ========================================
-   HERO / INTRO
-======================================== */
-
-.hero {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 120px 20px 100px;
-    text-align: center;
-}
-
-.hero-text {
-    width: 100%;
-}
-
-
-/* Small title above main heading */
-
-.eyebrow {
-    font-size: 12px;
-    letter-spacing: 3px;
-    font-weight: 400;
-    margin-bottom: 25px;
-}
-
-
-/* Main heading */
-
-.hero h2 {
-    font-size: clamp(48px, 7vw, 82px);
-    line-height: 1;
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-
-
-/* Description */
-
-.hero p:not(.eyebrow) {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-
-/* ========================================
-   HERO BUTTONS
-======================================== */
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 40px;
-}
-
-.button {
-    display: inline-block;
-    padding: 14px 28px;
-    border: 1px solid #111111;
-    color: #111111;
-    text-decoration: none;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.button:hover {
-    background: #111111;
-    color: #ffffff;
-}
-
-.button.secondary {
-    background: #ffffff;
-}
-
-.button.secondary:hover {
-    background: #111111;
-    color: #ffffff;
-}
-
-
-/* ========================================
-   FEATURED ARTWORK
-======================================== */
-
-.featured-art {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 40px 120px;
-}
-
-
-/* Section heading */
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.section-heading h2 {
-    font-size: 36px;
-    font-weight: 400;
-    margin-top: 10px;
-}
-
-
-/* Featured image */
-
-.hero-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image img {
-    display: block;
-    width: 750px;
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* ========================================
-   ABOUT / MY PRACTICE
-======================================== */
-
-.home-about {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 120px 40px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-}
-
-.home-about h2 {
-    font-size: 42px;
-    line-height: 1.1;
-    font-weight: 400;
-    margin-top: 10px;
-}
-
-.home-about > div:last-child p {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 25px;
-    max-width: 500px;
-}
-
-
-/* About link */
-
-.text-link {
-    display: inline-block;
-    color: #111111;
-    text-decoration: none;
-    border-bottom: 1px solid #111111;
-    padding-bottom: 5px;
-    font-size: 14px;
-    transition: opacity 0.3s ease;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.text-link:hover {
-    opacity: 0.5;
-}
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* ========================================
-   FOOTER
-======================================== */
+    <title>Renee Ramphal | Artist & Designer</title>
 
-footer {
-    text-align: center;
-    padding: 35px 20px;
-    margin-top: 40px;
-    background: #f5f5f5;
-    border-top: 1px solid #dddddd;
-}
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-footer p {
-    font-size: 12px;
-    color: #666666;
-}
+<body class="home-page">
 
+<header>
+    <h1>Renee Ramphal</h1>
 
-/* ========================================
-   MOBILE
-======================================== */
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="artworks.html">Artwork</a>
+        <a href="mockups.html">Mockups</a>
+        <a href="generative.html">Generative</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-@media (max-width: 768px) {
 
-    /* Header */
+<main>
 
-    header {
-        padding: 25px 15px 20px;
-    }
+    <!-- INTRO -->
+    <section class="hero">
 
-    header h1 {
-        font-size: 24px;
-    }
-
-    nav {
-        gap: 15px;
-    }
-
-    nav a {
-        font-size: 13px;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        padding: 80px 20px 70px;
-    }
-
-    .hero h2 {
-        font-size: 48px;
-    }
-
-    .hero p:not(.eyebrow) {
-        font-size: 15px;
-    }
-
-
-    /* Buttons */
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .button {
-        width: 200px;
-        text-align: center;
-    }
-
-
-    /* Featured artwork */
-
-    .featured-art {
-        padding: 60px 20px 80px;
-    }
-
-    .section-heading h2 {
-        font-size: 30px;
-    }
-
-    .hero-image img {
-        width: 100%;
-    }
-
-
-    /* About */
-
-    .home-about {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 80px 25px;
-    }
-
-    .home-about h2 {
-        font-size: 36px;
-    }
-}
+        <div class="hero-text">
+            <p class="eyebrow">ARTIST & DESIGNER</p>
 
+            <h2>Art that speaks<br>through expression.</h2>
 
-/* ========================================
-   SMALL PHONES
-======================================== */
+            <p>
+                Graphic designer and visual artist creating expressive
+                paintings, digital illustrations, and interactive media.
+            </p>
 
-@media (max-width: 480px) {
+            <div class="hero-buttons">
+                <a href="artworks.html" class="button">View Artwork</a>
+                <a href="portfolio.html" class="button secondary">View Portfolio</a>
+            </div>
+        </div>
 
-    .hero h2 {
-        font-size: 40px;
-    }
+    </section>
 
-    .hero {
-        padding-top: 65px;
-    }
 
-    .eyebrow {
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
+    <!-- FEATURED ARTWORK -->
+    <section class="featured-art">
 
-    .home-about h2 {
-        font-size: 32px;
-    }
-}
+        <div class="section-heading">
+            <p class="eyebrow">FEATURED WORK</p>
+            <h2>A glimpse into my practice.</h2>
+        </div>
 
-/* ========================================
-   PAGE INTRO
-======================================== */
+        <div class="hero-image">
+            <img 
+                src="https://res.cloudinary.com/igc7mcmc/image/upload/v1788753500/homePageArtfitti2_kxppcx.jpg"
+                alt="Featured artwork by Renee Ramphal">
+        </div>
 
-.page-intro {
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 100px 20px 60px;
-    text-align: center;
-}
+    </section>
 
-.page-intro h2 {
-    font-size: clamp(40px, 6vw, 65px);
-    line-height: 1.05;
-    font-weight: 400;
-    margin-bottom: 25px;
-}
 
-.page-intro p:not(.eyebrow) {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 16px;
-    line-height: 1.8;
-}
+    <!-- ABOUT PREVIEW -->
+    <section class="home-about">
 
+        <div>
+            <p class="eyebrow">MY PRACTICE</p>
+            <h2>Creating through art & design.</h2>
+        </div>
 
-/* ========================================
-   ARTWORK GALLERY
-======================================== */
+        <div>
+            <p>
+                My work explores visual expression through painting,
+                graphic design, digital imagery, and interactive media.
+                Each piece is an opportunity to experiment, communicate,
+                and create something meaningful.
+            </p>
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
+            <a href="about.html" class="text-link">Learn more about me →</a>
+        </div>
 
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 40px 120px;
-}
+    </section>
 
-.card {
-    overflow: hidden;
-}
+</main>
 
-.card img {
-    width: 100%;
-    height: auto;
-    display: block;
 
-    transition: transform 0.4s ease;
-}
+<footer>
+    <p>&copy; 2026 Renee Ramphal. All rights reserved.</p>
+</footer>
 
-.card:hover img {
-    transform: scale(1.03);
-}
 
+<script src="js/script.js"></script>
 
-/* ========================================
-   LIGHTBOX
-======================================== */
+</body>
+</html>
 
-.lightbox {
-    display: none;
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.9);
-
-    justify-content: center;
-    align-items: center;
-
-    z-index: 2000;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 5px;
-}
-
-.close {
-    position: absolute;
-
-    top: 20px;
-    right: 35px;
-
-    color: white;
-    font-size: 45px;
-
-    cursor: pointer;
-}
-
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 900px) {
-
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-        padding: 30px 25px 80px;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .page-intro {
-        padding: 70px 20px 40px;
-    }
-
-    .page-intro h2 {
-        font-size: 38px;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 20px 20px 70px;
-    }
-
-}
-.home-page .button.secondary {
-    background: transparent;
-}
-
-.home-page {
-    background: #a091ca;
-}
-
-.home-page header {
-    background: #a091ca;
-    border-bottom: 1px solid rgba(17, 17, 17, 0.2);
-}
-
-.home-page footer {
-    background: #a091ca;
-    border-top: 1px solid rgba(17, 17, 17, 0.2);
-}
