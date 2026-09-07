@@ -1,4 +1,7 @@
 
+.home-page {
+    background: #a091ca;
+}
 
 /* ========================================
    RESET
@@ -942,4 +945,21 @@ footer p {
         padding: 20px 20px 70px;
     }
 
+}
+.home-page .button.secondary {
+    background: transparent;
+}
+
+.home-page {
+    background: #a091ca;
+}
+
+.home-page header {
+    background: #a091ca;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.home-page footer {
+    background: #a091ca;
+    border-top: 1px solid rgba(17, 17, 17, 0.2);
 }
