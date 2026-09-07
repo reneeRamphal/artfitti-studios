@@ -1,105 +1,695 @@
+/* =========================================
+   RESET
+========================================= */
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Renee Ramphal | Artist & Designer</title>
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body class="home-page">
-
-<header>
-    <h1>Renee Ramphal</h1>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="artworks.html">Artwork</a>
-        <a href="mockups.html">Mockups</a>
-        <a href="generative.html">Generative</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
-<main>
+/* =========================================
+   BODY
+========================================= */
 
-    <!-- INTRO -->
-    <section class="hero">
-
-        <div class="hero-text">
-            <p class="eyebrow">ARTIST & DESIGNER</p>
-
-            <h2>Art that speaks<br>through expression.</h2>
-
-            <p>
-                Graphic designer and visual artist creating expressive
-                paintings, digital illustrations, and interactive media.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="artworks.html" class="button">View Artwork</a>
-                <a href="portfolio.html" class="button secondary">View Portfolio</a>
-            </div>
-        </div>
-
-    </section>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111111;
+    min-height: 100vh;
+}
 
 
-    <!-- FEATURED ARTWORK -->
-    <section class="featured-art">
+/* =========================================
+   HEADER
+========================================= */
 
-        <div class="section-heading">
-            <p class="eyebrow">FEATURED WORK</p>
-            <h2>A glimpse into my practice.</h2>
-        </div>
+header {
+    width: 100%;
+    padding: 30px 20px 20px;
+    text-align: center;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
 
-        <div class="hero-image">
-            <img 
-                src="https://res.cloudinary.com/igc7mcmc/image/upload/v1788753500/homePageArtfitti2_kxppcx.jpg"
-                alt="Featured artwork by Renee Ramphal">
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT PREVIEW -->
-    <section class="home-about">
-
-        <div>
-            <p class="eyebrow">MY PRACTICE</p>
-            <h2>Creating through art & design.</h2>
-        </div>
-
-        <div>
-            <p>
-                My work explores visual expression through painting,
-                graphic design, digital imagery, and interactive media.
-                Each piece is an opportunity to experiment, communicate,
-                and create something meaningful.
-            </p>
-
-            <a href="about.html" class="text-link">Learn more about me →</a>
-        </div>
-
-    </section>
-
-</main>
+header h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 400;
+}
 
 
-<footer>
-    <p>&copy; 2026 Renee Ramphal. All rights reserved.</p>
-</footer>
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
 
 
-<script src="js/script.js"></script>
+/* =========================================
+   HOME PAGE
+========================================= */
 
-</body>
-</html>
+.home-page {
+    background: #cbbdf1;
+}
 
+.home-page header {
+    background: #cbbdf1;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.home-page main {
+    background: #cbbdf1;
+}
+
+.home-page footer {
+    background: #cbbdf1;
+    border-top: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.home-page .hero h2,
+.home-page .hero .eyebrow {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 120px 20px 100px;
+    text-align: center;
+}
+
+.hero-text {
+    width: 100%;
+}
+
+.eyebrow {
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.hero h2 {
+    margin-bottom: 30px;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1;
+    font-weight: 400;
+}
+
+.hero p:not(.eyebrow) {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid #111111;
+    background: transparent;
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+
+/* Keep View Portfolio transparent on lavender background */
+
+.home-page .button.secondary {
+    background: transparent;
+}
+
+.home-page .button.secondary:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FEATURED ARTWORK
+========================================= */
+
+.featured-art {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px 120px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-top: 10px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    display: block;
+    width: 750px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================
+   PAGE INTRO
+========================================= */
+
+.page-intro {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 100px 20px 60px;
+    text-align: center;
+}
+
+.page-intro h2 {
+    margin-bottom: 25px;
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.05;
+    font-weight: 400;
+}
+
+.page-intro p:not(.eyebrow) {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 40px 120px;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+
+    display: grid;
+    grid-template-columns: 700px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-text h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   HOME ABOUT / MY PRACTICE
+========================================= */
+
+.home-about {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 40px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.home-about h2 {
+    margin-top: 10px;
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.home-about > div:last-child p {
+    max-width: 500px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.text-link {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #111111;
+
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: opacity 0.3s ease;
+}
+
+.text-link:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.contact p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 15px;
+
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    padding: 15px;
+
+    border: none;
+    background: #000000;
+    color: #ffffff;
+
+    cursor: pointer;
+    font-size: 1rem;
+
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #555555;
+}
+
+
+/* =========================================
+   GENERATIVE ART
+========================================= */
+
+.generative-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 60px auto;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.generative-container canvas {
+    display: block;
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+
+    border: 2px solid #cccccc;
+}
+
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   GENERAL TEXT
+========================================= */
+
+body > p {
+    max-width: 700px;
+    margin: 20px auto 50px;
+
+    text-align: center;
+    line-height: 1.7;
+}
+
+.text {
+    max-width: 700px;
+    margin: 40px auto;
+
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 40px;
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #f5f5f5;
+    border-top: 1px solid #dddddd;
+}
+
+footer p {
+    color: #666666;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 30px 25px 80px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        padding: 0 25px;
+    }
+
+    .about-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 25px 15px 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 80px 20px 70px;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+
+    .hero p:not(.eyebrow) {
+        font-size: 15px;
+    }
+
+
+    /* Buttons */
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 200px;
+        text-align: center;
+    }
+
+
+    /* Featured artwork */
+
+    .featured-art {
+        padding: 60px 20px 80px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+
+    /* Home about */
+
+    .home-about {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 80px 25px;
+    }
+
+    .home-about h2 {
+        font-size: 36px;
+    }
+
+
+    /* Generative art */
+
+    .generative-container {
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    .generative-container canvas {
+        width: 100%;
+    }
+
+
+    /* Gallery */
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px 20px 70px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding-top: 65px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .home-about h2 {
+        font-size: 32px;
+    }
+
+    .page-intro {
+        padding: 70px 20px 40px;
+    }
+
+    .page-intro h2 {
+        font-size: 38px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
